@@ -1,6 +1,6 @@
 # Swarm Event Schema
 
-This specifies the JSON schema (https://json-schema.org/) for generated events. Messages can be validated against the schema e.g. on https://www.jsonschemavalidator.net/ .
+This specifies the JSON schema (https://json-schema.org/) for generated events. Messages can be validated against the schema e.g. on https://www.jsonschemavalidator.net/.
 
 For implementation Details see see https://github.com/hal9000-swarm/curiosity_2.0#supported-events
 
