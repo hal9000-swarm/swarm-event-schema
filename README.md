@@ -9,9 +9,8 @@ For implementation Details see see https://github.com/hal9000-swarm/curiosity_2.
 ### Traffic Monitoring
 
 Sample message
-```json
-{ 
-  {
+```javascript
+ {
    "version":"1.0",
    "node":{
       "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
@@ -41,19 +40,16 @@ Sample message
             "x":0.0,
             "y":525.807861328125
          },
-         
-         ...
-
+         // SNIP
          {
-            "timestamp":"2019-12-29T10:31:15.173212Z",
-            "h":757.237060546875,
+            "timestamp":"2019-12-29T10:31:20.373202Z",
+            "h":757.2371215820313,
             "w":1013.7042236328125,
-            "x":137.61514282226563,
-            "y":161.38143920898438
+            "x":131.88348388671875,
+            "y":157.8472137451172
          }
       ]
    }
-}
 }
 ```
 
