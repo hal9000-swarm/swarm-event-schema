@@ -30,9 +30,9 @@
                "enum":[
                   "car",
                   "truck",
-                  "pedestrian",
-                  "cyclist",
-                  "motorcyclist",
+                  "person",
+                  "bicycle",
+                  "motorbike",
                   "bus"
                ]
             },
