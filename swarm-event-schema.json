@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://swarm-analytics.com/schema/event/1.3",
+  "title": "Swarm Event Schema",
+  "definitions": {
+    "id": {
+      "type": "string",
+      "examples": [
+        "56317209-9B83-43A6-A63E-58C9191A7869"
+      ]
+    },
+    "heatmapEvent": {
+      "type": "object",
+      "properties": {
+        "class": {
+          "type": "string"
+        },
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "w": {
+                "type": "number"
+              },
+              "h": {
+                "type": "number"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h",
+              "timestamp"
+            ]
+          }
+        }
+      },
+      "required": [
+        "class",
+        "path"
+      ]
+    },
+    "regionOfInterestEvent": {
+      "type": "object",
+      "properties": {
+        "roiId": {
+          "$ref": "#/definitions/id"
+        },
+        "roiName": {
+          "type": "string"
+        },
+        "triggerType": {
+          "enum": [
+            "time"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "occupied",
+            "vacant"
+          ]
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "class": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "class"
+            ]
+          }
+        }
+      },
+      "required": [
+        "roiId",
+        "roiName",
+        "triggerType",
+        "timestamp",
+        "state",
+        "objects"
+      ]
+    },
+    "crossingLineEvent": {
+      "type": "object",
+      "properties": {
+        "lineId": {
+          "$ref": "#/definitions/id"
+        },
+        "lineName": {
+          "type": "string"
+        },
+        "class": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "in",
+            "out"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "class",
+        "lineId",
+        "lineName",
+        "direction",
+        "timestamp"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.3"
+    },
+    "node": {
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "regionOfInterestEvent": {
+      "$ref": "#/definitions/regionOfInterestEvent"
+    },
+    "crossingLineEvent": {
+      "$ref": "#/definitions/crossingLineEvent"
+    },
+    "heatmapEvent": {
+      "$ref": "#/definitions/heatmapEvent"
+    }
+  },
+  "required": [
+    "version",
+    "node"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "regionOfInterestEvent"
+      ]
+    },
+    {
+      "required": [
+        "crossingLineEvent"
+      ]
+    },
+    {
+      "required": [
+        "heatmapEvent"
+      ]
+    }
+  ],
+  "additionalProperties": false
+}
