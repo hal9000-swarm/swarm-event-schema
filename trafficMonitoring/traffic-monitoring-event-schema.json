@@ -112,6 +112,9 @@
          "type":"string",
          "const":"1.0"
       },
+      "eventSchema": {
+         "type": "string"
+      },
       "node":{
          "properties":{
             "id":{
@@ -132,6 +135,7 @@
    },
    "required":[
       "version",
+      "eventSchema",
       "node",
       "trafficEvent"
    ],
