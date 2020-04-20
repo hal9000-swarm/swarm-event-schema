@@ -1,0 +1,19 @@
+{
+   "version":"1.0",
+   "eventSchema" : "https://swarm-analytics.com/schema/event/capacitymonitoring/1.0",
+   "node":{
+      "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
+      "name":"test"
+   },
+   "capacityMonitoringEvent":{
+      "person" : {
+         "class": "person",
+         "age" : 34,
+         "gender" : "female"
+      },
+      "accessId" : "de39df4a-8d1d-400f-b009-ce86d357115c"
+      "accessName" : "front entry"
+      "direction" : "in",
+      "timestamp":"2019-12-29T10:31:14.373202Z"  
+   }
+}

@@ -1,0 +1,106 @@
+{
+   "$schema":"http://json-schema.org/draft-07/schema#",
+   "$id":"https://swarm-analytics.com/schema/event/capacitymonitoring/1.0",
+   "title":"Capacity Monitoring Event Schema",
+   "definitions":{
+      "id":{
+         "type":"string",
+         "examples":[
+            "56317209-9B83-43A6-A63E-58C9191A7869"
+         ]
+      },
+      "person" : {
+         "type": "object",
+         "properties":  {
+             "class":{
+               "type":"string",
+               "enum":[
+                  "person"
+               ]
+            },
+            "age" : {
+               "type":"integer",
+               "example": "32"
+            },
+            "gender": {
+               "type":"string",
+               "enum":[
+                  "male",
+                  "female"
+               ]
+            }
+         },
+         "required": [
+            "class"
+         ],
+         "optional" : [
+            "age",
+            "gender"
+         ],
+         "additionalProperties":false    
+      },
+      "capacityMonitoringEvent":{
+         "type":"object",
+         "properties":{
+            "person" : {
+                "$ref":"#/definitions/person"
+            }, 
+            "accessId": {
+               "$ref": "#/definitions/id"
+            },
+            "accessName": {
+                "type": "string"
+            },
+            "direction":{
+               "type":"string",
+               "enum":[
+                  "in",
+                  "out"
+               ]
+            },
+            "timestamp":{
+               "type":"string",
+               "format":"date-time"
+            }
+         },
+         "required":[
+            "person", "direction", "timestamp", "accessId", "accessName"
+         ],
+         "additionalProperties":false    
+      }
+   },
+   "type":"object",
+   "properties":{
+      "version":{
+         "type":"string",
+         "const":"1.0"
+      },
+      "eventSchema":{
+         "type":"string"
+      },
+      "node":{
+         "properties":{
+            "id":{
+               "$ref":"#/definitions/id"
+            },
+            "name":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "id",
+            "name"
+         ]
+      },
+      "capacityMonitoringEvent":{
+         "$ref":"#/definitions/capacityMonitoringEvent"
+      }
+   },
+   "required":[
+      "version",
+      "eventSchema",
+      "node",
+      "capacityMonitoringEvent"
+   ],
+   "additionalProperties":false
+}
