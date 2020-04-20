@@ -64,9 +64,16 @@
             }
          },
          "required":[
-            "person", "direction", "timestamp", "accessId", "accessName"
+            "direction", "timestamp", "accessId", "accessName"
          ],
-         "additionalProperties":false    
+         "oneOf" : [
+             {
+               "required": [
+                 "person"
+               ]
+             },
+         ]
+
       }
    },
    "type":"object",
