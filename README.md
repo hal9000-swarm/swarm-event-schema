@@ -4,6 +4,59 @@ This specifies the JSON schema (https://json-schema.org/) for generated events. 
 
 ## Supported Events / Examples
 
+### People Insights
+
+Two options are possible for virtual doors and capacity counting zones.
+
+Sample message for a zone:
+```javascript
+{
+   "version":"1.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.0",
+   "node":{
+      "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
+      "name":"test"
+   },
+   "capacityMonitoringEvent":{
+      "zoneEvent": {
+         "objects": [
+           {
+             "class": "person"
+           }
+         ],
+         "zoneId": "69031920-6239-471e-a3d7-f241b7753fd0",
+         "zoneName": "zone1",
+         "state": "occupied",
+         "timestamp": "2020-01-02T14:59:27.85136Z",
+         "triggerType": "time"
+       }
+   }
+}
+```
+
+Sample message for a virtual door:
+```javascript
+{
+   "version": "1.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.0",
+   "node": {
+      "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
+      "name": "test"
+   },
+   "capacityMonitoringEvent": {
+      "virtualDoorEvent": {
+         "object": {
+            "class": "person"
+         },
+         "virtualDoorId": "69031920-6239-471e-a3d7-f241b7753fd0",
+         "virtualDoorName": "door1",
+         "timestamp": "2020-01-02T14:59:27.85136Z",
+         "direction": "in"
+      }
+   }
+}
+```
+
 ### Traffic Monitoring
 
 Sample message
