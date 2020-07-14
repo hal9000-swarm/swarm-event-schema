@@ -9,6 +9,21 @@
             "56317209-9B83-43A6-A63E-58C9191A7869"
          ]
       },
+      "node": {
+         "type": "object",
+         "properties": {
+           "id": {
+             "$ref": "#/definitions/id"
+           },
+           "name": {
+             "type": "string"
+           }
+         },
+         "required": [
+           "id",
+           "name"
+         ]
+       },
       "zone":{
          "type":"object",
          "properties":{
@@ -116,18 +131,7 @@
          "type": "string"
       },
       "node":{
-         "properties":{
-            "id":{
-               "$ref":"#/definitions/id"
-            },
-            "name":{
-               "type":"string"
-            }
-         },
-         "required":[
-            "id",
-            "name"
-         ]
+         "$ref":"#/definitions/node"
       },
       "trafficEvent":{
          "$ref":"#/definitions/trafficEvent"

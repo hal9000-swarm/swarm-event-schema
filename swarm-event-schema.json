@@ -9,6 +9,21 @@
         "56317209-9B83-43A6-A63E-58C9191A7869"
       ]
     },
+    "node": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
     "heatmapEvent": {
       "type": "object",
       "properties": {
@@ -144,18 +159,7 @@
       "type": "string"
     },
     "node": {
-      "properties": {
-        "id": {
-          "$ref": "#/definitions/id"
-        },
-        "name": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "id",
-        "name"
-      ]
+      "$ref": "#/definitions/regionOfInterestEvent"
     },
     "regionOfInterestEvent": {
       "$ref": "#/definitions/regionOfInterestEvent"
