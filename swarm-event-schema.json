@@ -159,7 +159,7 @@
       "type": "string"
     },
     "node": {
-      "$ref": "#/definitions/regionOfInterestEvent"
+      "$ref": "#/definitions/node"
     },
     "regionOfInterestEvent": {
       "$ref": "#/definitions/regionOfInterestEvent"
