@@ -24,7 +24,7 @@
             "name"
          ]
       },
-      "trafficClassifications":{
+      "trafficClassification":{
          "type":"string",
          "enum":[
             "car",
@@ -52,7 +52,7 @@
       "trafficEvent":{
          "properties":{
             "classification":{
-               "$ref":"#/definitions/trafficClassifications"
+               "$ref":"#/definitions/trafficClassification"
             },
             "entry":{
                "properties":{
