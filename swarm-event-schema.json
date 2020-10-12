@@ -30,6 +30,9 @@
         "class": {
           "type": "string"
         },
+        "trackId": {
+          "type": "number"
+        },
         "path": {
           "type": "array",
           "items": {
@@ -78,7 +81,8 @@
         },
         "triggerType": {
           "enum": [
-            "time"
+            "time",
+            "change"
           ]
         },
         "timestamp": {
@@ -153,7 +157,7 @@
   "properties": {
     "version": {
       "type": "string",
-      "const": "1.4"
+      "const": "1.5"
     },
     "eventSchema": {
       "type": "string"

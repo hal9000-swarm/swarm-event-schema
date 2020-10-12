@@ -132,6 +132,7 @@ Sample message
 { 
    "heatmapEvent":{ 
       "class":"car",
+      "trackId": 23,
       "path":[ 
          { 
             "h":554.192138671875,
