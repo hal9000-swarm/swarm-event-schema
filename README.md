@@ -120,7 +120,8 @@ Sample message
       "id":"test",
       "name":"test"
    },
-   "version":"1.3"
+   "version":"1.5",
+   "eventSchema": "https://swarm-analytics.com/schema/event/1.5",
 }
 ```
 
@@ -131,6 +132,7 @@ Sample message
 { 
    "heatmapEvent":{ 
       "class":"car",
+      "trackId": 23,
       "path":[ 
          { 
             "h":554.192138671875,
@@ -187,7 +189,8 @@ Sample message
       "id":"test",
       "name":"test"
    },
-   "version":"1.3"
+   "version":"1.5",
+   "eventSchema": "https://swarm-analytics.com/schema/event/1.5",
 }
 ```
 
@@ -212,6 +215,7 @@ Sample message
     "timestamp": "2020-01-02T14:59:27.85136Z",
     "triggerType": "time"
   },
-  "version": "1.3"
+   "version":"1.5",
+   "eventSchema": "https://swarm-analytics.com/schema/event/1.5",
 }
 ```
