@@ -1,12 +1,13 @@
 {
-   "version":"1.1",
-   "eventSchema": "https://swarm-analytics.com/schema/event/trafficmonitoring/1.1",
+   "version":"1.2",
+   "eventSchema": "https://swarm-analytics.com/schema/event/trafficmonitoring/1.2",
    "node":{
       "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
       "name":"test"
    },
    "trafficEvent":{
-      "classification":"car",
+      "classification":"truck",
+      "subClass": "articulated-truck",
       "entry":{
          "zone":{
             "zoneId":"56317209-9B83-43A6-A63E-58C9191A7869",

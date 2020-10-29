@@ -1,6 +1,6 @@
 {
    "$schema":"http://json-schema.org/draft-07/schema#",
-   "$id":"https://swarm-analytics.com/schema/event/trafficmonitoring/1.1",
+   "$id":"https://swarm-analytics.com/schema/event/trafficmonitoring/1.2",
    "title":"Traffic Monitoring Event Schema",
    "definitions":{
       "id":{
@@ -53,6 +53,9 @@
          "properties":{
             "classification":{
                "$ref":"#/definitions/trafficClassification"
+            },
+            "subClass": {
+               "type":"string"
             },
             "entry":{
                "properties":{
@@ -132,7 +135,7 @@
    "properties":{
       "version":{
          "type":"string",
-         "const":"1.1"
+         "const":"1.2"
       },
       "eventSchema":{
          "type":"string"

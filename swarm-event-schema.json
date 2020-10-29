@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://swarm-analytics.com/schema/event/1.5",
+  "$id": "https://swarm-analytics.com/schema/event/1.6",
   "title": "Swarm Event Schema",
   "definitions": {
     "id": {
@@ -28,6 +28,9 @@
       "type": "object",
       "properties": {
         "class": {
+          "type": "string"
+        },
+        "subClass": {
           "type": "string"
         },
         "trackId": {
@@ -103,6 +106,12 @@
             "properties": {
               "class": {
                 "type": "string"
+              },
+              "dwellTime": {
+                "type": "number"
+              },
+              "subClass" : {
+                "type": "string"
               }
             },
             "required": [
@@ -132,6 +141,9 @@
         "class": {
           "type": "string"
         },
+        "subClass": {
+          "type": "string"
+        },
         "direction": {
           "type": "string",
           "enum": [
@@ -157,7 +169,7 @@
   "properties": {
     "version": {
       "type": "string",
-      "const": "1.5"
+      "const": "1.6"
     },
     "eventSchema": {
       "type": "string"
