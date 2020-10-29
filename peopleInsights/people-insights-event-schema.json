@@ -1,6 +1,6 @@
 {
    "$schema": "http://json-schema.org/draft-07/schema#",
-   "$id": "https://swarm-analytics.com/schema/event/peopleinsights/1.1",
+   "$id": "https://swarm-analytics.com/schema/event/peopleinsights/1.2",
    "title": "People Insights Event Schema",
    "definitions": {
       "id": {
@@ -124,6 +124,9 @@
                   "properties": {
                      "class": {
                         "type": "string"
+                     },
+                     "dwellTime": {
+                        "type": "number"
                      }
                   },
                   "required": [
@@ -146,7 +149,7 @@
    "properties": {
       "version": {
          "type": "string",
-         "const": "1.1"
+         "const": "1.2"
       },
       "eventSchema": {
          "type": "string"

@@ -1,6 +1,6 @@
 {
    "version": "1.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.2",
    "node": {
       "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
       "name": "test"

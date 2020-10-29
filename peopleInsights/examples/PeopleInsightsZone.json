@@ -1,6 +1,6 @@
 {
-   "version":"1.1",
-   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.1",
+   "version":"1.2",
+   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.2",
    "node":{
       "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
       "name":"test"
@@ -9,7 +9,8 @@
       "zoneEvent": {
          "objects": [
            {
-             "class": "person"
+             "class": "person",
+             "dwellTime": 45
            }
          ],
          "zoneId": "69031920-6239-471e-a3d7-f241b7753fd0",

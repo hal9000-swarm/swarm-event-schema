@@ -12,7 +12,7 @@ Sample message for a zone:
 ```javascript
 {
    "version":"1.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.2",
    "node":{
       "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
       "name":"test"
@@ -37,8 +37,8 @@ Sample message for a zone:
 Sample message for a virtual door:
 ```javascript
 {
-   "version": "1.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.0",
+   "version": "1.2",
+   "eventSchema": "https://swarm-analytics.com/schema/event/peopleinsights/1.2",
    "node": {
       "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
       "name": "test"
@@ -62,7 +62,7 @@ Sample message for a virtual door:
 Sample message
 ```javascript
  {
-   "version":"1.0",
+   "version":"1.2",
    "node":{
       "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
       "name":"test"
@@ -121,7 +121,7 @@ Sample message
       "name":"test"
    },
    "version":"1.5",
-   "eventSchema": "https://swarm-analytics.com/schema/event/1.5",
+   "eventSchema": "https://swarm-analytics.com/schema/event/1.6",
 }
 ```
 
@@ -189,8 +189,8 @@ Sample message
       "id":"test",
       "name":"test"
    },
-   "version":"1.5",
-   "eventSchema": "https://swarm-analytics.com/schema/event/1.5",
+   "version":"1.6",
+   "eventSchema": "https://swarm-analytics.com/schema/event/1.6",
 }
 ```
 
@@ -215,7 +215,7 @@ Sample message
     "timestamp": "2020-01-02T14:59:27.85136Z",
     "triggerType": "time"
   },
-   "version":"1.5",
-   "eventSchema": "https://swarm-analytics.com/schema/event/1.5",
+   "version":"1.6",
+   "eventSchema": "https://swarm-analytics.com/schema/event/1.6",
 }
 ```
