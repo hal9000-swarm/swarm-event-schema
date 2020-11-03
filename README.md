@@ -2,6 +2,8 @@
 
 This specifies the JSON schema (https://json-schema.org/) for generated events. Messages can be validated against the schema e.g. on https://www.jsonschemavalidator.net/.
 
+The expert event schema is defined in swarm-event-schema.json, while solution specific schemas are defined in the corresponding subfolders.
+
 ## Supported Events / Examples
 
 ### People Insights
