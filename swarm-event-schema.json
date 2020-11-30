@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://swarm-analytics.com/schema/event/1.6",
+  "$id": "https://swarm-analytics.com/schema/event/3.0",
   "title": "Swarm Event Schema",
   "definitions": {
     "id": {
@@ -73,6 +73,49 @@
         "path"
       ]
     },
+    "virtualDoorEvent": {
+      "type": "object",
+      "properties": {
+        "virtualDoorId": {
+          "$ref": "#/definitions/id"
+        },
+        "virtualDoorName": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "in",
+            "out"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "object": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string",
+              "enum": [
+                "person"
+              ]
+            }
+          },
+          "required": [
+            "class"
+          ]
+        }
+      },
+      "required": [
+        "virtualDoorId",
+        "virtualDoorName",
+        "timestamp",
+        "direction",
+        "object"
+      ]
+    },
     "regionOfInterestEvent": {
       "type": "object",
       "properties": {
@@ -110,7 +153,7 @@
               "dwellTime": {
                 "type": "number"
               },
-              "subClass" : {
+              "subClass": {
                 "type": "string"
               }
             },
@@ -163,13 +206,108 @@
         "direction",
         "timestamp"
       ]
+    },
+    "zone": {
+      "type": "object",
+      "properties": {
+        "zoneId": {
+          "$ref": "#/definitions/id"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "zoneId"
+      ]
+    },
+    "originDestinationEvent": {
+      "properties": {
+        "classification": {
+          "type": "string"
+        },
+        "subClass": {
+          "type": "string"
+        },
+        "entry": {
+          "properties": {
+            "zone": {
+              "$ref": "#/definitions/zone"
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": [
+            "zone",
+            "timestamp"
+          ]
+        },
+        "exit": {
+          "properties": {
+            "zone": {
+              "$ref": "#/definitions/zone"
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": [
+            "zone",
+            "timestamp"
+          ]
+        },
+        "trackId": {
+          "type": "number"
+        },
+        "movementPath": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "w": {
+                "type": "number"
+              },
+              "h": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h",
+              "timestamp"
+            ]
+          }
+        }
+      },
+      "required": [
+        "classification",
+        "entry",
+        "exit",
+        "movementPath",
+        "trackId"
+      ]
     }
   },
   "type": "object",
   "properties": {
     "version": {
       "type": "string",
-      "const": "1.6"
+      "const": "3.0"
     },
     "eventSchema": {
       "type": "string"
@@ -182,6 +320,12 @@
     },
     "crossingLineEvent": {
       "$ref": "#/definitions/crossingLineEvent"
+    },
+    "virtualDoorEvent": {
+      "$ref": "#/definitions/virtualDoorEvent"
+    },
+    "originDestinationEvent": {
+      "$ref": "#/definitions/originDestinationEvent"
     },
     "heatmapEvent": {
       "$ref": "#/definitions/heatmapEvent"
@@ -206,6 +350,16 @@
     {
       "required": [
         "heatmapEvent"
+      ]
+    },
+    {
+      "required": [
+        "virtualDoorEvent"
+      ]
+    },
+    {
+      "required": [
+        "originDestinationEvent"
       ]
     }
   ],
