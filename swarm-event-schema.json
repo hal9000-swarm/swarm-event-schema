@@ -194,6 +194,9 @@
             "out"
           ]
         },
+        "trackId" : {
+           "type": "number" 
+        },
         "timestamp": {
           "type": "string",
           "format": "date-time"
