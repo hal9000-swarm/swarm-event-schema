@@ -26,6 +26,9 @@ Sample message for a zone:
              "class": "person"
            }
          ],
+          "objectsCount": {
+              "person": 1
+          },
          "zoneId": "69031920-6239-471e-a3d7-f241b7753fd0",
          "zoneName": "zone1",
          "state": "occupied",
@@ -122,8 +125,8 @@ Sample message
       "id":"test",
       "name":"test"
    },
-   "version":"1.5",
-   "eventSchema": "https://swarm-analytics.com/schema/event/1.6",
+   "version":"3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/3.0"
 }
 ```
 
@@ -191,8 +194,8 @@ Sample message
       "id":"test",
       "name":"test"
    },
-   "version":"1.6",
-   "eventSchema": "https://swarm-analytics.com/schema/event/1.6",
+   "version":"3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/3.0"
 }
 ```
 
@@ -209,15 +212,25 @@ Sample message
     "objects": [
       {
         "class": "person"
+      },
+      {
+        "class": "car"
+      },
+      {
+        "class": "car"
       }
     ],
+    "objectsCount": {
+        "person": 1,
+        "car": 2
+    },
     "roiId": "69031920-6239-471e-a3d7-f241b7753fd0",
     "roiName": "R1",
     "state": "occupied",
     "timestamp": "2020-01-02T14:59:27.85136Z",
     "triggerType": "time"
   },
-   "version":"1.6",
-   "eventSchema": "https://swarm-analytics.com/schema/event/1.6",
+   "version":"3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/3.0"
 }
 ```
