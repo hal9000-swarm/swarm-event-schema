@@ -197,6 +197,9 @@
         "trackId" : {
            "type": "number" 
         },
+        "numberPlate": {
+           "type": "string",
+        },
         "timestamp": {
           "type": "string",
           "format": "date-time"
