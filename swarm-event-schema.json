@@ -93,6 +93,9 @@
           "type": "string",
           "format": "date-time"
         },
+        "trackId": {
+          "type": "number"
+        },
         "object": {
           "type": "object",
           "properties": {
@@ -134,6 +137,9 @@
         "timestamp": {
           "type": "string",
           "format": "date-time"
+        },
+        "trackId": {
+          "type": "number"
         },
         "state": {
           "type": "string",
@@ -198,7 +204,7 @@
            "type": "number" 
         },
         "numberPlate": {
-           "type": "string",
+           "type": "string"
         },
         "timestamp": {
           "type": "string",
