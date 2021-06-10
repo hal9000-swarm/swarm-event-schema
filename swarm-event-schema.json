@@ -138,9 +138,6 @@
           "type": "string",
           "format": "date-time"
         },
-        "trackId": {
-          "type": "number"
-        },
         "state": {
           "type": "string",
           "enum": [
@@ -155,6 +152,9 @@
             "properties": {
               "class": {
                 "type": "string"
+              },
+              "trackId": {
+                "type": "number"
               },
               "dwellTime": {
                 "type": "number"
