@@ -25,6 +25,10 @@ Sample message
       "id":"test",
       "name":"test"
    },
+   "stream":{ 
+      "id":"streamid",
+      "name":"streamname"
+   },
    "version":"3.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
 }
@@ -94,6 +98,10 @@ Sample message
       "id":"test",
       "name":"test"
    },
+   "stream":{ 
+      "id":"streamid",
+      "name":"streamname"
+   },
    "version":"3.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
 }
@@ -108,6 +116,10 @@ Sample message
     "id": "test",
     "name": "test"
   },
+   "stream":{ 
+      "id":"streamid",
+      "name":"streamname"
+   },
   "regionOfInterestEvent": {
     "objects": [
       {
@@ -135,6 +147,10 @@ Sample message
    "node":{
       "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
       "name":"test"
+   },
+    "stream":{ 
+      "id":"streamid",
+      "name":"streamname"
    },
    "originDestinationEvent":{
       "classification":"truck",
@@ -219,6 +235,10 @@ Sample message
    "node": {
       "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
       "name": "test"
+   },
+    "stream":{ 
+      "id":"streamid",
+      "name":"streamname"
    },
     "virtualDoorEvent": {
          "object": {
