@@ -22,8 +22,12 @@ Sample message
       "trackId": 23,
    },
    "node":{ 
-      "id":"test",
+      "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
+   },
+   "stream":{ 
+      "id":"79031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"streamname"
    },
    "version":"3.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
@@ -91,8 +95,12 @@ Sample message
       ]
    },
    "node":{ 
-      "id":"test",
+      "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
+   },
+   "stream":{ 
+      "id":"79031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"streamname"
    },
    "version":"3.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
@@ -104,10 +112,14 @@ Sample message
 Sample message
 ```json
 {
-  "node": {
-    "id": "test",
-    "name": "test"
-  },
+   "node":{ 
+      "id":"99031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"test"
+   },
+   "stream":{ 
+      "id":"79031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"streamname"
+   },
   "regionOfInterestEvent": {
     "objects": [
       {
@@ -132,9 +144,13 @@ Sample message
 {
    "version":"3.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
-   "node":{
-      "id":"b8ade223-e847-4741-a405-7f62c0403aa2",
+    "node":{ 
+      "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
+   },
+   "stream":{ 
+      "id":"79031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"streamname"
    },
    "originDestinationEvent":{
       "classification":"truck",
@@ -219,6 +235,10 @@ Sample message
    "node": {
       "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
       "name": "test"
+   },
+   "stream":{ 
+      "id":"streamid",
+      "name":"streamname"
    },
     "virtualDoorEvent": {
          "object": {

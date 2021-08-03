@@ -24,6 +24,21 @@
         "name"
       ]
     },
+     "stream": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
     "heatmapEvent": {
       "type": "object",
       "properties": {
@@ -327,6 +342,9 @@
     "node": {
       "$ref": "#/definitions/node"
     },
+    "stream": {
+      "$ref": "#/definitions/stream"
+    },
     "regionOfInterestEvent": {
       "$ref": "#/definitions/regionOfInterestEvent"
     },
@@ -346,7 +364,8 @@
   "required": [
     "version",
     "eventSchema",
-    "node"
+    "node",
+    "stream"
   ],
   "oneOf": [
     {
