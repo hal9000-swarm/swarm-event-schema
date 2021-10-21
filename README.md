@@ -34,6 +34,34 @@ Sample message
 }
 ```
 
+### Crossing Line with ANPR
+
+Sample message
+```json
+{ 
+   "crossingLineEvent":{ 
+      "class":"car",
+      "subClass":"van",
+      "direction":"in",
+      "lineId":"test_id",
+      "lineName":"garage",
+      "timestamp":"2019-12-29T10:31:14.373202Z",
+      "trackId": 42,
+      "numberPlate": "IXXX42"
+   },
+   "node":{ 
+      "id":"99031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"test"
+   },
+   "stream":{ 
+      "id":"79031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"streamname"
+   },
+   "version":"3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
+}
+```
+
 ### Heatmap
 
 Sample message
