@@ -151,7 +151,7 @@ Sample message
   "regionOfInterestEvent": {
     "objects": [
       {
-        "class": "person", "trackId": 23
+        "class": "person", "trackId": 23, "dwellTime": 19
       }
     ],
     "roiId": "69031920-6239-471e-a3d7-f241b7753fd0",
