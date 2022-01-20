@@ -149,6 +149,15 @@
             "change"
           ]
         },
+        "roiType": {
+          "enum": [
+            "parking",
+            "generic"
+          ]
+        },
+        "capacity": {
+          "type": "number"
+        },
         "timestamp": {
           "type": "string",
           "format": "date-time"
@@ -187,6 +196,8 @@
       "required": [
         "roiId",
         "roiName",
+        "roiType",
+        "capacity",
         "triggerType",
         "timestamp",
         "state",
