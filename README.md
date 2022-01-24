@@ -158,7 +158,9 @@ Sample message
     "roiName": "R1",
     "state": "occupied",
     "timestamp": "2020-01-02T14:59:27.85136Z",
-    "triggerType": "time"
+    "triggerType": "time",
+    "roiType": "generic",
+    "capacity": 20
   },
    "version":"3.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
