@@ -180,13 +180,20 @@ Sample message
     "parkingSummary": [
       {
         "capacity": 20,
-        "objects": [],
         "roiId": "9e70ac77-872c-40c0-a65f-1044061aaf60",
-        "roiName": "TWI",
-        "state": "vacant"
+        "roiName": "Parking1",
+        "vehicles": 4
+      },
+      {
+        "capacity": 15,
+        "roiId": "8e70ac77-872c-40c0-a65f-1044061aaf60",
+        "roiName": "Parking2",
+        "vehicles": 8
       }
     ],
-    "timestamp": "2022-02-18T10:22:50.373408Z"
+    "timestamp": "2022-02-18T10:22:50.373408Z",
+    "totalCapacity": 35,
+    "totalVehicles": 12
   },
   "stream": {
     "id": "streamId",
