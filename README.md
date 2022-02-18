@@ -159,11 +159,40 @@ Sample message
     "state": "occupied",
     "timestamp": "2020-01-02T14:59:27.85136Z",
     "triggerType": "time",
-    "roiType": "generic",
     "capacity": 20
   },
    "version":"3.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
+}
+```
+
+### Parking specific Region of Interest
+
+
+```json
+{
+  "eventSchema": "https://swarm-analytics.com/schema/event/",
+  "node": {
+    "id": "nodeId",
+    "name": "nodeName"
+  },
+  "parkingEvent": {
+    "parkingSummary": [
+      {
+        "capacity": 20,
+        "objects": [],
+        "roiId": "9e70ac77-872c-40c0-a65f-1044061aaf60",
+        "roiName": "TWI",
+        "state": "vacant"
+      }
+    ],
+    "timestamp": "2022-02-18T10:22:50.373408Z"
+  },
+  "stream": {
+    "id": "streamId",
+    "name": "streamname"
+  },
+  "version": "3.0"
 }
 ```
 

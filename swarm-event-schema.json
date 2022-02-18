@@ -149,12 +149,6 @@
             "change"
           ]
         },
-        "roiType": {
-          "enum": [
-            "parking",
-            "generic"
-          ]
-        },
         "capacity": {
           "type": "number"
         },
@@ -196,12 +190,77 @@
       "required": [
         "roiId",
         "roiName",
-        "roiType",
-        "capacity",
         "triggerType",
         "timestamp",
         "state",
         "objects"
+      ]
+    },
+    "parkingEvent": {
+      "type": "object",
+      "properties": {
+        "parkingSummary": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+               "capacity": {
+                "type": "number"
+              },
+              "roiId": {
+                "$ref": "#/definitions/id"
+              },
+              "roiName": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "occupied",
+                  "vacant"
+                ]
+              },
+              "objects": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "class": {
+                      "type": "string"
+                    },
+                    "trackId": {
+                      "type": "number"
+                    },
+                    "dwellTime": {
+                      "type": "number"
+                    },
+                    "subClass": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "class"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "roiId",
+              "roiName",
+              "state",
+              "objects", 
+              "capacity"
+            ]
+          }
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+      },
+      "required": [
+        "timestamp",
+        "parkingSummary"
       ]
     },
     "crossingLineEvent": {
@@ -359,6 +418,9 @@
     "regionOfInterestEvent": {
       "$ref": "#/definitions/regionOfInterestEvent"
     },
+     "parkingEvent": {
+      "$ref": "#/definitions/parkingEvent"
+    },
     "crossingLineEvent": {
       "$ref": "#/definitions/crossingLineEvent"
     },
@@ -382,6 +444,11 @@
     {
       "required": [
         "regionOfInterestEvent"
+      ]
+    },
+    {
+      "required": [
+        "parkingEvent"
       ]
     },
     {
