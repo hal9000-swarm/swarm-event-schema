@@ -149,12 +149,6 @@
             "change"
           ]
         },
-        "roiType": {
-          "enum": [
-            "parking",
-            "generic"
-          ]
-        },
         "capacity": {
           "type": "number"
         },
@@ -196,12 +190,55 @@
       "required": [
         "roiId",
         "roiName",
-        "roiType",
-        "capacity",
         "triggerType",
         "timestamp",
         "state",
         "objects"
+      ]
+    },
+    "parkingEvent": {
+      "type": "object",
+      "properties": {
+        "parkingSummary": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "roiId": {
+                "$ref": "#/definitions/id"
+              },
+              "roiName": {
+                "type": "string"
+              },
+              "capacity": {
+                "type": "number"
+              },
+              "vehicles": {
+                "type": "number"
+              },
+            },
+            "required": [
+              "roiId",
+              "roiName",
+              "capacity",
+              "vehicles"
+            ]
+          }
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "totalCapacity": {
+          "type": "number"
+        },
+        "totalVehicles": {
+          "type": "number"
+        },
+      },
+      "required": [
+        "timestamp",
+        "parkingSummary"
       ]
     },
     "crossingLineEvent": {
@@ -359,6 +396,9 @@
     "regionOfInterestEvent": {
       "$ref": "#/definitions/regionOfInterestEvent"
     },
+     "parkingEvent": {
+      "$ref": "#/definitions/parkingEvent"
+    },
     "crossingLineEvent": {
       "$ref": "#/definitions/crossingLineEvent"
     },
@@ -382,6 +422,11 @@
     {
       "required": [
         "regionOfInterestEvent"
+      ]
+    },
+    {
+      "required": [
+        "parkingEvent"
       ]
     },
     {
