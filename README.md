@@ -16,10 +16,11 @@ Sample message
    "crossingLineEvent":{ 
       "class":"person",
       "direction":"in",
+      "speedestimate": "83.26",
       "lineId":"test_id",
       "lineName":"office",
       "timestamp":"2019-12-29T10:31:14.373202Z",
-      "trackId": 23,
+      "trackId": 23
    },
    "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
