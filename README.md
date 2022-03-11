@@ -8,7 +8,7 @@ The expert event schema is defined in swarm-event-schema.json, while solution sp
 
 
 
-### Crossing Line
+### Counting Line / Crossing Line
 
 Sample message
 ```json
@@ -35,7 +35,7 @@ Sample message
 }
 ```
 
-### Crossing Line with ANPR
+### Counting Line / Crossing Line with ANPR
 
 Sample message
 ```json
