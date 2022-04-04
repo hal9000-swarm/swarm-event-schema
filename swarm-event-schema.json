@@ -215,7 +215,7 @@
               },
               "vehicles": {
                 "type": "number"
-              },
+              }
             },
             "required": [
               "roiId",
