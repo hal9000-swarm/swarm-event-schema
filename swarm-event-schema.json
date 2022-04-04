@@ -272,6 +272,9 @@
         "numberPlate": {
            "type": "string"
         },
+        "numberPlateImage": {
+           "type": "string"
+        },
         "timestamp": {
           "type": "string",
           "format": "date-time"
