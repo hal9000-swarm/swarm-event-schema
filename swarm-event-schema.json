@@ -272,7 +272,7 @@
         "numberPlate": {
            "type": "string"
         },
-        "country": {
+        "numberPlateOrigin": {
           "type": "string"
         },  
         "timestamp": {
