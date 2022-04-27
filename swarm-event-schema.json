@@ -266,7 +266,7 @@
         "trackId" : {
            "type": "number" 
         },
-        "speedEstimation" : {
+        "speedestimate" : {
           "type": "string"
         },
         "numberPlate": {
