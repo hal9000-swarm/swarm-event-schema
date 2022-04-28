@@ -235,6 +235,20 @@
         "totalVehicles": {
           "type": "number"
         },
+        "numberPlates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "numberPlate": {
+                "type": "string"
+              },
+              "numberPlateOrigin": {
+                "type": "string"
+              }
+            }
+          }
+        }
       },
       "required": [
         "timestamp",
