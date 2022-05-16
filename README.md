@@ -375,6 +375,7 @@ Sample message
     },
     "ruleId": "2b854935-cf8b-45af-b0e2-eaec456195bc",
     "ruleName": "cars near people",
+   "timestamp": "2022-04-28T12:22:06.761660Z",
     "stream":
     {
         "id": "96dfc3e0-0e82-4790-8104-cff33455dc2b",

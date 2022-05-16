@@ -614,6 +614,11 @@
         {
             "type": "string"
         },
+        "timestamp":
+        {
+            "type": "string",
+            "format": "date-time"
+        },
         "regionOfInterestEvent":
         {
             "$ref": "#/definitions/regionOfInterestEvent"
