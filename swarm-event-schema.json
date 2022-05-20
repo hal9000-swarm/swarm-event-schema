@@ -1,474 +1,704 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://swarm-analytics.com/schema/event/3.0",
-  "title": "Swarm Event Schema",
-  "definitions": {
-    "id": {
-      "type": "string",
-      "examples": [
-        "56317209-9B83-43A6-A63E-58C9191A7869"
-      ]
-    },
-    "node": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "$ref": "#/definitions/id"
-        },
-        "name": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "id",
-        "name"
-      ]
-    },
-     "stream": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "$ref": "#/definitions/id"
-        },
-        "name": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "id",
-        "name"
-      ]
-    },
-    "heatmapEvent": {
-      "type": "object",
-      "properties": {
-        "class": {
-          "type": "string"
-        },
-        "subClass": {
-          "type": "string"
-        },
-        "trackId": {
-          "type": "number"
-        },
-        "path": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "x": {
-                "type": "number"
-              },
-              "y": {
-                "type": "number"
-              },
-              "w": {
-                "type": "number"
-              },
-              "h": {
-                "type": "number"
-              },
-              "timestamp": {
-                "type": "string",
-                "format": "date-time"
-              }
-            },
-            "required": [
-              "x",
-              "y",
-              "w",
-              "h",
-              "timestamp"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://swarm-analytics.com/schema/event/4.0",
+    "title": "Swarm Event Schema",
+    "definitions":
+    {
+        "id":
+        {
+            "type": "string",
+            "examples":
+            [
+                "56317209-9B83-43A6-A63E-58C9191A7869"
             ]
-          }
-        }
-      },
-      "required": [
-        "class",
-        "path"
-      ]
-    },
-    "virtualDoorEvent": {
-      "type": "object",
-      "properties": {
-        "virtualDoorId": {
-          "$ref": "#/definitions/id"
         },
-        "virtualDoorName": {
-          "type": "string"
-        },
-        "direction": {
-          "type": "string",
-          "enum": [
-            "in",
-            "out"
-          ]
-        },
-        "timestamp": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "trackId": {
-          "type": "number"
-        },
-        "object": {
-          "type": "object",
-          "properties": {
-            "class": {
-              "type": "string",
-              "enum": [
-                "person"
-              ]
-            }
-          },
-          "required": [
-            "class"
-          ]
-        }
-      },
-      "required": [
-        "virtualDoorId",
-        "virtualDoorName",
-        "timestamp",
-        "direction",
-        "object"
-      ]
-    },
-    "regionOfInterestEvent": {
-      "type": "object",
-      "properties": {
-        "roiId": {
-          "$ref": "#/definitions/id"
-        },
-        "roiName": {
-          "type": "string"
-        },
-        "triggerType": {
-          "enum": [
-            "time",
-            "change"
-          ]
-        },
-        "capacity": {
-          "type": "number"
-        },
-        "timestamp": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "state": {
-          "type": "string",
-          "enum": [
-            "occupied",
-            "vacant"
-          ]
-        },
-        "objects": {
-          "type": "array",
-          "items": {
+        "node":
+        {
             "type": "object",
-            "properties": {
-              "class": {
-                "type": "string"
-              },
-              "trackId": {
-                "type": "number"
-              },
-              "dwellTime": {
-                "type": "number"
-              },
-              "subClass": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "class"
-            ]
-          }
-        }
-      },
-      "required": [
-        "roiId",
-        "roiName",
-        "triggerType",
-        "timestamp",
-        "state",
-        "objects"
-      ]
-    },
-    "parkingEvent": {
-      "type": "object",
-      "properties": {
-        "parkingSummary": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "roiId": {
-                "$ref": "#/definitions/id"
-              },
-              "roiName": {
-                "type": "string"
-              },
-              "capacity": {
-                "type": "number"
-              },
-              "vehicles": {
-                "type": "number"
-              },
-              "numberPlates": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "numberPlate": {
-                      "type": "string"
-                    },
-                    "numberPlateOrigin": {
-                      "type": "string"
-                    }
-                  }
+            "properties":
+            {
+                "id":
+                {
+                    "$ref": "#/definitions/id"
+                },
+                "name":
+                {
+                    "type": "string"
                 }
-              }
             },
-            "required": [
-              "roiId",
-              "roiName",
-              "capacity",
-              "vehicles"
+            "required":
+            [
+                "id",
+                "name"
             ]
-          }
         },
-        "timestamp": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "totalCapacity": {
-          "type": "number"
-        },
-        "totalVehicles": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "timestamp",
-        "parkingSummary"
-      ]
-    },
-    "crossingLineEvent": {
-      "type": "object",
-      "properties": {
-        "lineId": {
-          "$ref": "#/definitions/id"
-        },
-        "lineName": {
-          "type": "string"
-        },
-        "class": {
-          "type": "string"
-        },
-        "subClass": {
-          "type": "string"
-        },
-        "direction": {
-          "type": "string",
-          "enum": [
-            "in",
-            "out"
-          ]
-        },
-        "trackId" : {
-           "type": "number" 
-        },
-        "speedestimate" : {
-          "type": "string"
-        },
-        "numberPlate": {
-           "type": "string"
-        },
-        "numberPlateOrigin": {
-          "type": "string"
-        },  
-        "timestamp": {
-          "type": "string",
-          "format": "date-time"
-        }
-      },
-      "required": [
-        "class",
-        "lineId",
-        "lineName",
-        "direction",
-        "timestamp"
-      ]
-    },
-    "zone": {
-      "type": "object",
-      "properties": {
-        "zoneId": {
-          "$ref": "#/definitions/id"
-        },
-        "name": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "zoneId"
-      ]
-    },
-    "originDestinationEvent": {
-      "properties": {
-        "classification": {
-          "type": "string"
-        },
-        "subClass": {
-          "type": "string"
-        },
-        "entry": {
-          "properties": {
-            "zone": {
-              "$ref": "#/definitions/zone"
-            },
-            "timestamp": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          "required": [
-            "zone",
-            "timestamp"
-          ]
-        },
-        "exit": {
-          "properties": {
-            "zone": {
-              "$ref": "#/definitions/zone"
-            },
-            "timestamp": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          "required": [
-            "zone",
-            "timestamp"
-          ]
-        },
-        "trackId": {
-          "type": "number"
-        },
-        "movementPath": {
-          "type": "array",
-          "items": {
+        "stream":
+        {
             "type": "object",
-            "properties": {
-              "timestamp": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "x": {
-                "type": "number"
-              },
-              "y": {
-                "type": "number"
-              },
-              "w": {
-                "type": "number"
-              },
-              "h": {
-                "type": "number"
-              }
+            "properties":
+            {
+                "id":
+                {
+                    "$ref": "#/definitions/id"
+                },
+                "name":
+                {
+                    "type": "string"
+                }
             },
-            "required": [
-              "x",
-              "y",
-              "w",
-              "h",
-              "timestamp"
+            "required":
+            [
+                "id",
+                "name"
             ]
-          }
+        },
+        "ruleEvents":
+        {
+            "type": "array",
+            "items":
+            {
+                "type": "object",
+                "properties":
+                {
+                    "regionOfInterestEvent":
+                    {
+                        "$ref": "#/definitions/regionOfInterestEvent"
+                    },
+                    "parkingEvent":
+                    {
+                        "$ref": "#/definitions/parkingEvent"
+                    },
+                    "crossingLineEvent":
+                    {
+                        "$ref": "#/definitions/crossingLineEvent"
+                    },
+                    "virtualDoorEvent":
+                    {
+                        "$ref": "#/definitions/virtualDoorEvent"
+                    },
+                    "originDestinationEvent":
+                    {
+                        "$ref": "#/definitions/originDestinationEvent"
+                    }
+                },
+                "oneOf":
+                [
+                    {
+                        "required":
+                        [
+                            "regionOfInterestEvent"
+                        ]
+                    },
+                    {
+                        "required":
+                        [
+                            "parkingEvent"
+                        ]
+                    },
+                    {
+                        "required":
+                        [
+                            "crossingLineEvent"
+                        ]
+                    },
+                    {
+                        "required":
+                        [
+                            "virtualDoorEvent"
+                        ]
+                    },
+                    {
+                        "required":
+                        [
+                            "originDestinationEvent"
+                        ]
+                    }
+                ]
+            }
+        },
+        "heatmapEvent":
+        {
+            "type": "object",
+            "properties":
+            {
+                "class":
+                {
+                    "type": "string"
+                },
+                "subClass":
+                {
+                    "type": "string"
+                },
+                "trackId":
+                {
+                    "type": "number"
+                },
+                "path":
+                {
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "object",
+                        "properties":
+                        {
+                            "x":
+                            {
+                                "type": "number"
+                            },
+                            "y":
+                            {
+                                "type": "number"
+                            },
+                            "w":
+                            {
+                                "type": "number"
+                            },
+                            "h":
+                            {
+                                "type": "number"
+                            },
+                            "timestamp":
+                            {
+                                "type": "string",
+                                "format": "date-time"
+                            }
+                        },
+                        "required":
+                        [
+                            "x",
+                            "y",
+                            "w",
+                            "h",
+                            "timestamp"
+                        ]
+                    }
+                }
+            },
+            "required":
+            [
+                "class",
+                "path"
+            ]
+        },
+        "virtualDoorEvent":
+        {
+            "type": "object",
+            "properties":
+            {
+                "virtualDoorId":
+                {
+                    "$ref": "#/definitions/id"
+                },
+                "virtualDoorName":
+                {
+                    "type": "string"
+                },
+                "direction":
+                {
+                    "type": "string",
+                    "enum":
+                    [
+                        "in",
+                        "out"
+                    ]
+                },
+                "timestamp":
+                {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "trackId":
+                {
+                    "type": "number"
+                },
+                "object":
+                {
+                    "type": "object",
+                    "properties":
+                    {
+                        "class":
+                        {
+                            "type": "string",
+                            "enum":
+                            [
+                                "person"
+                            ]
+                        }
+                    },
+                    "required":
+                    [
+                        "class"
+                    ]
+                }
+            },
+            "required":
+            [
+                "virtualDoorId",
+                "virtualDoorName",
+                "timestamp",
+                "direction",
+                "object"
+            ]
+        },
+        "regionOfInterestEvent":
+        {
+            "type": "object",
+            "properties":
+            {
+                "roiId":
+                {
+                    "$ref": "#/definitions/id"
+                },
+                "roiName":
+                {
+                    "type": "string"
+                },
+                "triggerType":
+                {
+                    "enum":
+                    [
+                        "time",
+                        "change"
+                    ]
+                },
+                "capacity":
+                {
+                    "type": "number"
+                },
+                "timestamp":
+                {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "state":
+                {
+                    "type": "string",
+                    "enum":
+                    [
+                        "occupied",
+                        "vacant"
+                    ]
+                },
+                "objects":
+                {
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "object",
+                        "properties":
+                        {
+                            "class":
+                            {
+                                "type": "string"
+                            },
+                            "trackId":
+                            {
+                                "type": "number"
+                            },
+                            "dwellTime":
+                            {
+                                "type": "number"
+                            },
+                            "subClass":
+                            {
+                                "type": "string"
+                            }
+                        },
+                        "required":
+                        [
+                            "class"
+                        ]
+                    }
+                }
+            },
+            "required":
+            [
+                "roiId",
+                "roiName",
+                "triggerType",
+                "timestamp",
+                "state",
+                "objects"
+            ]
+        },
+        "parkingEvent":
+        {
+            "type": "object",
+            "properties":
+            {
+                "parkingSummary":
+                {
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "object",
+                        "properties":
+                        {
+                            "roiId":
+                            {
+                                "$ref": "#/definitions/id"
+                            },
+                            "roiName":
+                            {
+                                "type": "string"
+                            },
+                            "capacity":
+                            {
+                                "type": "number"
+                            },
+                            "vehicles":
+                            {
+                                "type": "number"
+                            },
+                            "numberPlates":
+                            {
+                                "type": "array",
+                                "items":
+                                {
+                                    "type": "object",
+                                    "properties":
+                                    {
+                                        "numberPlate":
+                                        {
+                                            "type": "string"
+                                        },
+                                        "numberPlateOrigin":
+                                        {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "required":
+                        [
+                            "roiId",
+                            "roiName",
+                            "capacity",
+                            "vehicles"
+                        ]
+                    }
+                },
+                "timestamp":
+                {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "totalCapacity":
+                {
+                    "type": "number"
+                },
+                "totalVehicles":
+                {
+                    "type": "number"
+                }
+            },
+            "required":
+            [
+                "timestamp",
+                "parkingSummary"
+            ]
+        },
+        "crossingLineEvent":
+        {
+            "type": "object",
+            "properties":
+            {
+                "lineId":
+                {
+                    "$ref": "#/definitions/id"
+                },
+                "lineName":
+                {
+                    "type": "string"
+                },
+                "class":
+                {
+                    "type": "string"
+                },
+                "subClass":
+                {
+                    "type": "string"
+                },
+                "direction":
+                {
+                    "type": "string",
+                    "enum":
+                    [
+                        "in",
+                        "out"
+                    ]
+                },
+                "trackId":
+                {
+                    "type": "number"
+                },
+                "speedestimate":
+                {
+                    "type": "string"
+                },
+                "numberPlate":
+                {
+                    "type": "string"
+                },
+                "numberPlateOrigin":
+                {
+                    "type": "string"
+                },
+                "timestamp":
+                {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required":
+            [
+                "class",
+                "lineId",
+                "lineName",
+                "direction",
+                "timestamp"
+            ]
+        },
+        "zone":
+        {
+            "type": "object",
+            "properties":
+            {
+                "zoneId":
+                {
+                    "$ref": "#/definitions/id"
+                },
+                "name":
+                {
+                    "type": "string"
+                }
+            },
+            "required":
+            [
+                "zoneId"
+            ]
+        },
+        "originDestinationEvent":
+        {
+            "properties":
+            {
+                "classification":
+                {
+                    "type": "string"
+                },
+                "subClass":
+                {
+                    "type": "string"
+                },
+                "entry":
+                {
+                    "properties":
+                    {
+                        "zone":
+                        {
+                            "$ref": "#/definitions/zone"
+                        },
+                        "timestamp":
+                        {
+                            "type": "string",
+                            "format": "date-time"
+                        }
+                    },
+                    "required":
+                    [
+                        "zone",
+                        "timestamp"
+                    ]
+                },
+                "exit":
+                {
+                    "properties":
+                    {
+                        "zone":
+                        {
+                            "$ref": "#/definitions/zone"
+                        },
+                        "timestamp":
+                        {
+                            "type": "string",
+                            "format": "date-time"
+                        }
+                    },
+                    "required":
+                    [
+                        "zone",
+                        "timestamp"
+                    ]
+                },
+                "trackId":
+                {
+                    "type": "number"
+                },
+                "movementPath":
+                {
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "object",
+                        "properties":
+                        {
+                            "timestamp":
+                            {
+                                "type": "string",
+                                "format": "date-time"
+                            },
+                            "x":
+                            {
+                                "type": "number"
+                            },
+                            "y":
+                            {
+                                "type": "number"
+                            },
+                            "w":
+                            {
+                                "type": "number"
+                            },
+                            "h":
+                            {
+                                "type": "number"
+                            }
+                        },
+                        "required":
+                        [
+                            "x",
+                            "y",
+                            "w",
+                            "h",
+                            "timestamp"
+                        ]
+                    }
+                }
+            },
+            "required":
+            [
+                "classification",
+                "entry",
+                "exit",
+                "movementPath",
+                "trackId"
+            ]
         }
-      },
-      "required": [
-        "classification",
-        "entry",
-        "exit",
-        "movementPath",
-        "trackId"
-      ]
-    }
-  },
-  "type": "object",
-  "properties": {
-    "version": {
-      "type": "string",
-      "const": "3.0"
     },
-    "eventSchema": {
-      "type": "string"
-    },
-    "node": {
-      "$ref": "#/definitions/node"
-    },
-    "stream": {
-      "$ref": "#/definitions/stream"
-    },
-    "regionOfInterestEvent": {
-      "$ref": "#/definitions/regionOfInterestEvent"
-    },
-     "parkingEvent": {
-      "$ref": "#/definitions/parkingEvent"
-    },
-    "crossingLineEvent": {
-      "$ref": "#/definitions/crossingLineEvent"
-    },
-    "virtualDoorEvent": {
-      "$ref": "#/definitions/virtualDoorEvent"
-    },
-    "originDestinationEvent": {
-      "$ref": "#/definitions/originDestinationEvent"
-    },
-    "heatmapEvent": {
-      "$ref": "#/definitions/heatmapEvent"
-    }
-  },
-  "required": [
-    "version",
-    "eventSchema",
-    "node",
-    "stream"
-  ],
-  "oneOf": [
+    "type": "object",
+    "properties":
     {
-      "required": [
-        "regionOfInterestEvent"
-      ]
+        "version":
+        {
+            "type": "string",
+            "const": "4.0"
+        },
+        "eventSchema":
+        {
+            "type": "string"
+        },
+        "node":
+        {
+            "$ref": "#/definitions/node"
+        },
+        "stream":
+        {
+            "$ref": "#/definitions/stream"
+        },
+        "ruleId":
+        {
+            "type": "string"
+        },
+        "ruleName":
+        {
+            "type": "string"
+        },
+        "timestamp":
+        {
+            "type": "string",
+            "format": "date-time"
+        },
+        "regionOfInterestEvent":
+        {
+            "$ref": "#/definitions/regionOfInterestEvent"
+        },
+        "parkingEvent":
+        {
+            "$ref": "#/definitions/parkingEvent"
+        },
+        "crossingLineEvent":
+        {
+            "$ref": "#/definitions/crossingLineEvent"
+        },
+        "virtualDoorEvent":
+        {
+            "$ref": "#/definitions/virtualDoorEvent"
+        },
+        "originDestinationEvent":
+        {
+            "$ref": "#/definitions/originDestinationEvent"
+        },
+        "heatmapEvent":
+        {
+            "$ref": "#/definitions/heatmapEvent"
+        },
+        "ruleEvents":
+        {
+            "$ref": "#/definitions/ruleEvents"
+        }
     },
-    {
-      "required": [
-        "parkingEvent"
-      ]
-    },
-    {
-      "required": [
-        "crossingLineEvent"
-      ]
-    },
-    {
-      "required": [
-        "heatmapEvent"
-      ]
-    },
-    {
-      "required": [
-        "virtualDoorEvent"
-      ]
-    },
-    {
-      "required": [
-        "originDestinationEvent"
-      ]
-    }
-  ],
-  "additionalProperties": false
+    "required":
+    [
+        "version",
+        "eventSchema",
+        "node",
+        "stream"
+    ],
+    "oneOf":
+    [
+        {
+            "required":
+            [
+                "regionOfInterestEvent"
+            ]
+        },
+        {
+            "required":
+            [
+                "parkingEvent"
+            ]
+        },
+        {
+            "required":
+            [
+                "crossingLineEvent"
+            ]
+        },
+        {
+            "required":
+            [
+                "heatmapEvent"
+            ]
+        },
+        {
+            "required":
+            [
+                "virtualDoorEvent"
+            ]
+        },
+        {
+            "required":
+            [
+                "originDestinationEvent"
+            ]
+        },
+        {
+            "required":
+            [
+                "ruleEvents"
+            ]
+        }
+    ],
+    "additionalProperties": false
 }

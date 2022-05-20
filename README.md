@@ -30,7 +30,7 @@ Sample message
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
-   "version":"3.0",
+   "version":"4.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
 }
 ```
@@ -59,7 +59,7 @@ Sample message
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
-   "version":"3.0",
+   "version":"4.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
 }
 ```
@@ -132,7 +132,7 @@ Sample message
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
-   "version":"3.0",
+   "version":"4.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
 }
 ```
@@ -163,7 +163,7 @@ Sample message
     "triggerType": "time",
     "capacity": 20
   },
-   "version":"3.0",
+   "version":"4.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
 }
 ```
@@ -201,7 +201,7 @@ Sample message
     "id": "streamId",
     "name": "streamname"
   },
-  "version": "3.0"
+  "version": "4.0"
 }
 ```
 
@@ -210,7 +210,7 @@ Sample message
 Sample message
 ```json
 {
-   "version":"3.0",
+   "version":"4.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
     "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
@@ -298,7 +298,7 @@ Sample message
 Sample message
 ```json
 {
-   "version": "3.0",
+   "version": "4.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
    "node": {
       "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
@@ -320,3 +320,68 @@ Sample message
     }
 }
 ```
+
+
+### Rule Event
+
+Sample message
+```json
+{
+    "eventSchema": "https://swarm-analytics.com/schema/event/",
+    "ruleEvents":
+    [
+        {
+            "regionOfInterestEvent":
+            {
+                "capacity": 10,
+                "objects":
+                [
+                    {
+                        "class": "person",
+                        "dwellTime": 25,
+                        "trackId": 2
+                    },
+                    {
+                        "class": "person",
+                        "dwellTime": 10,
+                        "trackId": 10
+                    }
+                ],
+                "roiId": "96dfc3e0-0e82-4790-8104-cff33455dc2b",
+                "roiName": "roi1",
+                "state": "occupied",
+                "timestamp": "2022-04-28T12:22:06.761660Z",
+                "triggerType": "time"
+            }
+        },
+        {
+            "crossingLineEvent":
+            {
+                "class": "car",
+                "direction": "in",
+                "lineId": "3a103372-8b85-4191-8fe9-d88cb978d55d",
+                "lineName": "dangerline",
+                "speedestimate": "120",
+                "subClass": "van",
+                "timestamp": "2022-04-28T12:22:06.761660Z",
+                "trackId": 3
+            }
+        }
+    ],
+    "node":
+    {
+        "id": "96dfc3e0-0e82-4790-8104-cff33455dc2a",
+        "name": "node1"
+    },
+    "ruleId": "2b854935-cf8b-45af-b0e2-eaec456195bc",
+    "ruleName": "cars near people",
+   "timestamp": "2022-04-28T12:22:06.761660Z",
+    "stream":
+    {
+        "id": "96dfc3e0-0e82-4790-8104-cff33455dc2b",
+        "name": "stream1"
+    },
+    "version": "4.0"
+}
+```
+
