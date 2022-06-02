@@ -310,13 +310,13 @@ Sample message
    },
     "virtualDoorEvent": {
          "object": {
-            "class": "person",
-            "trackId": 23
+            "class": "person"
          },
          "virtualDoorId": "69031920-6239-471e-a3d7-f241b7753fd0",
          "virtualDoorName": "door1",
          "timestamp": "2020-01-02T14:59:27.85136Z",
-         "direction": "in"
+         "direction": "in",
+         "trackId": 23
     }
 }
 ```

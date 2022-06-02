@@ -218,11 +218,7 @@
                     {
                         "class":
                         {
-                            "type": "string",
-                            "enum":
-                            [
-                                "person"
-                            ]
+                            "type": "string"
                         }
                     },
                     "required":
