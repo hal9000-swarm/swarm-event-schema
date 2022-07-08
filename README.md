@@ -173,35 +173,50 @@ Sample message
 
 ```json
 {
-  "eventSchema": "https://swarm-analytics.com/schema/event/",
-  "node": {
-    "id": "nodeId",
-    "name": "nodeName"
-  },
-  "parkingEvent": {
-    "parkingSummary": [
-      {
-        "capacity": 20,
-        "roiId": "9e70ac77-872c-40c0-a65f-1044061aaf60",
-        "roiName": "Parking1",
-        "vehicles": 4
-      },
-      {
-        "capacity": 15,
-        "roiId": "8e70ac77-872c-40c0-a65f-1044061aaf60",
-        "roiName": "Parking2",
-        "vehicles": 8
-      }
-    ],
-    "timestamp": "2022-02-18T10:22:50.373408Z",
-    "totalCapacity": 35,
-    "totalVehicles": 12
-  },
-  "stream": {
-    "id": "streamId",
-    "name": "streamname"
-  },
-  "version": "4.0"
+    "eventSchema": "https://swarm-analytics.com/schema/event/",
+    "node":
+    {
+        "id": "nodeId",
+        "name": "nodeName"
+    },
+    "parkingEvent":
+    {
+        "parkingSummary":
+        [
+            {
+                "capacity": 20,
+                "roiId": "9e70ac77-872c-40c0-a65f-1044061aaf60",
+                "roiName": "Parking1",
+                "vehicles": 2,
+                "numberPlates":
+                [
+                    {
+                        "numberplate": "ISWARM1",
+                        "numberplateOrigin": "AT"
+                    },
+                    {
+                        "numberplate": "ISWARM2",
+                        "numberplateOrigin": "AT"
+                    }
+                ]
+            },
+            {
+                "capacity": 15,
+                "roiId": "8e70ac77-872c-40c0-a65f-1044061aaf60",
+                "roiName": "Parking2",
+                "vehicles": 8
+            }
+        ],
+        "timestamp": "2022-02-18T10:22:50.373408Z",
+        "totalCapacity": 35,
+        "totalVehicles": 12
+    },
+    "stream":
+    {
+        "id": "streamId",
+        "name": "streamname"
+    },
+    "version": "4.0"
 }
 ```
 
