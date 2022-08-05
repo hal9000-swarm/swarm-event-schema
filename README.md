@@ -31,7 +31,7 @@ Sample message
       "name":"streamname"
    },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
 }
 ```
 
@@ -60,7 +60,7 @@ Sample message
       "name":"streamname"
    },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
 }
 ```
 
@@ -133,7 +133,7 @@ Sample message
       "name":"streamname"
    },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
 }
 ```
 
@@ -164,7 +164,7 @@ Sample message
     "capacity": 20
   },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
 }
 ```
 
@@ -226,7 +226,7 @@ Sample message
 ```json
 {
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
     "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
@@ -314,7 +314,7 @@ Sample message
 ```json
 {
    "version": "4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/3.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
    "node": {
       "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
       "name": "test"
