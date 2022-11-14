@@ -52,6 +52,29 @@
                 "name"
             ]
         },
+        "journeyTimeInformation":
+        {
+            "type": "object",
+            "properties":
+            {
+                "saldId":
+                {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "hash":
+                {
+                    "type": "string",
+                    "minLength": 64,
+                    "maxLength": 64
+                }
+            },
+            "required":
+            [
+                "saldId",
+                "hash"
+            ]
+        },
         "ruleEvents":
         {
             "type": "array",
@@ -446,6 +469,14 @@
                     "type": "string",
                     "contentEncoding": "base64",
                     "contentMediaType": "image/jpeg"
+                },
+                "journeyTimePrimaryTag":
+                {
+                    "$ref": "#/definitions/journeyTimeInformation"
+                },
+                "journeyTimeSecondaryTag":
+                {
+                    "$ref": "#/definitions/journeyTimeInformation"
                 },
                 "timestamp":
                 {

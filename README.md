@@ -64,6 +64,41 @@ Sample message
 }
 ```
 
+### Counting Line / Including Journey Time Observation
+
+Sample message
+```json
+{ 
+   "crossingLineEvent":{ 
+      "class":"person",
+      "direction":"in",
+      "speedestimate": "83.26",
+      "lineId":"test_id",
+      "lineName":"office",
+      "timestamp":"2019-12-29T10:31:14.373202Z",
+      "trackId": 23,
+      "journeyTimePrimaryTag": {
+          "hash": "0f3f0125e621b6f29313eb8e6adddec192afa1dee9626fb8062725caf83f6867",
+          "saldId": "0c7355bd-bb7b-41c2-ae4c-a4f5ab89d1fa"
+      },
+      "journeyTimeSecondaryTag": {
+         "hash": "d8cee0c8bf219e0e46480c374aa0a8cabe149f2f21e2c1e60ceea137186e8c34",
+          "saldId": "0854a686-401a-42f2-b715-655180888c85"
+      }
+   },
+   "node":{ 
+      "id":"99031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"test"
+   },
+   "stream":{ 
+      "id":"79031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"streamname"
+   },
+   "version":"4.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
+}
+```
+
 ### Heatmap
 
 Sample message
