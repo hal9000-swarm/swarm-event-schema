@@ -57,7 +57,7 @@
             "type": "object",
             "properties":
             {
-                "saldId":
+                "saltId":
                 {
                     "type": "string",
                     "format": "uuid"
@@ -71,7 +71,7 @@
             },
             "required":
             [
-                "saldId",
+                "saltId",
                 "hash"
             ]
         },

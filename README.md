@@ -79,11 +79,11 @@ Sample message
       "trackId": 23,
       "journeyTimePrimaryTag": {
           "hash": "0f3f0125e621b6f29313eb8e6adddec192afa1dee9626fb8062725caf83f6867",
-          "saldId": "0c7355bd-bb7b-41c2-ae4c-a4f5ab89d1fa"
+          "saltId": "0c7355bd-bb7b-41c2-ae4c-a4f5ab89d1fa"
       },
       "journeyTimeSecondaryTag": {
          "hash": "d8cee0c8bf219e0e46480c374aa0a8cabe149f2f21e2c1e60ceea137186e8c34",
-          "saldId": "0854a686-401a-42f2-b715-655180888c85"
+          "saltId": "0854a686-401a-42f2-b715-655180888c85"
       }
    },
    "node":{ 
