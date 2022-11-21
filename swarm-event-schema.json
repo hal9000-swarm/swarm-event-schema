@@ -44,6 +44,9 @@
                 "name":
                 {
                     "type": "string"
+                },
+                "geoLocation": {
+                     "$ref": "#/definitions/geoLocation"
                 }
             },
             "required":
@@ -51,6 +54,21 @@
                 "id",
                 "name"
             ]
+        },
+        "geoLocation": {
+            "type": "object",
+            "required": [
+                "coordinates"
+              ],
+              "properties": {
+                "coordinates": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+            }
         },
         "journeyTimeInformation":
         {
@@ -67,12 +85,24 @@
                     "type": "string",
                     "minLength": 64,
                     "maxLength": 64
-                }
+                },
+                "validFrom":
+                {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "validUntil":
+                {
+                    "type": "string",
+                    "format": "date-time"
+                },
             },
             "required":
             [
                 "saltId",
-                "hash"
+                "hash",
+                "validFrom",
+                "validUntil"
             ]
         },
         "ruleEvents":
