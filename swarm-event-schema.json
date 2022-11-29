@@ -44,12 +44,65 @@
                 "name":
                 {
                     "type": "string"
+                },
+                "geoLocation": {
+                     "$ref": "#/definitions/geoLocation"
                 }
             },
             "required":
             [
                 "id",
                 "name"
+            ]
+        },
+        "geoLocation": {
+            "type": "object",
+            "required": [
+                "coordinates"
+              ],
+              "properties": {
+                "coordinates": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+            }
+        },
+        "journeyTimeInformation":
+        {
+            "type": "object",
+            "properties":
+            {
+                "saltId":
+                {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "hash":
+                {
+                    "type": "string",
+                    "minLength": 64,
+                    "maxLength": 64
+                },
+                "validFrom":
+                {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "validUntil":
+                {
+                    "type": "string",
+                    "format": "date-time"
+                },
+            },
+            "required":
+            [
+                "saltId",
+                "hash",
+                "validFrom",
+                "validUntil"
             ]
         },
         "ruleEvents":
@@ -446,6 +499,14 @@
                     "type": "string",
                     "contentEncoding": "base64",
                     "contentMediaType": "image/jpeg"
+                },
+                "journeyTimePrimaryTag":
+                {
+                    "$ref": "#/definitions/journeyTimeInformation"
+                },
+                "journeyTimeSecondaryTag":
+                {
+                    "$ref": "#/definitions/journeyTimeInformation"
                 },
                 "timestamp":
                 {
