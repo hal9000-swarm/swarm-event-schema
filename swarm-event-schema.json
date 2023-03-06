@@ -478,6 +478,10 @@
                         "out"
                     ]
                 },
+               "directionName":
+                {
+                    "type": "string"
+                },
                 "trackId":
                 {
                     "type": "number"
