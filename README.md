@@ -45,6 +45,7 @@ Sample message
       "class":"car",
       "subClass":"van",
       "direction":"in",
+      "directionName": "optional custom direction name",
       "lineId":"test_id",
       "lineName":"garage",
       "timestamp":"2019-12-29T10:31:14.373202Z",
@@ -76,6 +77,7 @@ Sample message
       "speedestimate": "83.26",
       "lineId":"test_id",
       "lineName":"office",
+      "directionName": "optional custom direction name",
       "timestamp":"2019-12-29T10:31:14.373202Z",
       "trackId": 23,   
       "journeyTimePrimaryTag": {
