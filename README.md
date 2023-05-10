@@ -16,6 +16,7 @@ Sample message
    "crossingLineEvent":{ 
       "class":"person",
       "direction":"in",
+      "directionName": "optional custom direction name",
       "speedestimate": "83.26",
       "lineId":"test_id",
       "lineName":"office",
