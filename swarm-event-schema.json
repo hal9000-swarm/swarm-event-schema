@@ -101,7 +101,7 @@
                 {
                     "type": "string",
                     "format": "date-time"
-                },
+                }
             },
             "required":
             [

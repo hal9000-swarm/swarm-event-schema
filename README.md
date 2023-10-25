@@ -32,7 +32,7 @@ Sample message
       "name":"streamname"
    },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "eventSchema": "https://swarm-analytics.com/schema/event/"
 }
 ```
 
@@ -64,7 +64,7 @@ Sample (counting event) with metadata
       "name":"streamname"
    },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "eventSchema": "https://swarm-analytics.com/schema/event/"
 }
 ```
 
@@ -94,7 +94,7 @@ Sample message
       "name":"streamname"
    },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "eventSchema": "https://swarm-analytics.com/schema/event/"
 }
 ```
 
@@ -137,7 +137,7 @@ Sample message
       }
    },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "eventSchema": "https://swarm-analytics.com/schema/event/"
 }
 ```
 
@@ -210,7 +210,7 @@ Sample message
       "name":"streamname"
    },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "eventSchema": "https://swarm-analytics.com/schema/event/"
 }
 ```
 
@@ -241,7 +241,7 @@ Sample message
     "capacity": 20
   },
    "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "eventSchema": "https://swarm-analytics.com/schema/event/"
 }
 ```
 
