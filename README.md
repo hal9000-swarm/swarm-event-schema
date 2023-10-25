@@ -36,6 +36,38 @@ Sample message
 }
 ```
 
+### Event including metadata
+
+Sample (counting event) with metadata
+```json
+{ 
+   "crossingLineEvent":{ 
+      "class":"person",
+      "direction":"in",
+      "directionName": "optional custom direction name",
+      "speedestimate": "83.26",
+      "lineId":"test_id",
+      "lineName":"office",
+      "timestamp":"2019-12-29T10:31:14.373202Z",
+      "trackId": 23
+   },
+   "metadata": {
+     "direction": "north",
+     "location":  "highway entrance"
+   },
+   "node":{ 
+      "id":"99031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"test"
+   },
+   "stream":{ 
+      "id":"79031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"streamname"
+   },
+   "version":"4.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
+}
+```
+
 ### Counting Line / Crossing Line with ANPR
 
 Sample message
