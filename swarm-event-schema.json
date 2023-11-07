@@ -55,6 +55,12 @@
                 "name"
             ]
         },
+        "metadata": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "string"
+            }
+        },
         "geoLocation": {
             "type": "object",
             "required": [
@@ -95,7 +101,7 @@
                 {
                     "type": "string",
                     "format": "date-time"
-                },
+                }
             },
             "required":
             [
@@ -672,6 +678,9 @@
         "stream":
         {
             "$ref": "#/definitions/stream"
+        },
+        "metadata": {
+            "$ref": "#/definitions/metadata"
         },
         "ruleId":
         {
