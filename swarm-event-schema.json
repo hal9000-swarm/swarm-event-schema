@@ -420,6 +420,10 @@
                                         "numberPlateOrigin":
                                         {
                                             "type": "string"
+                                        },
+                                        "numberPlateRegion":
+                                        {
+                                            "type": "string"
                                         }
                                     }
                                 }
@@ -501,6 +505,10 @@
                     "type": "string"
                 },
                 "numberPlateOrigin":
+                {
+                    "type": "string"
+                },
+                "numberPlateRegion":
                 {
                     "type": "string"
                 },
