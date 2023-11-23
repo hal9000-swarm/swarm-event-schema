@@ -85,7 +85,7 @@ Sample message
       "trackId": 42,
       "numberPlate": "IXXX42",
       "numberPlateOrigin": "AT",
-      "numberPlateRegion":"W"
+      "numberPlateArea":"W"
    },
    "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
@@ -272,12 +272,12 @@ Sample message
                     {
                         "numberplate": "ISWARM1",
                         "numberplateOrigin": "AT",
-                        "numberPlateRegion":"I"
+                        "numberPlateArea":"I"
                     },
                     {
                         "numberplate": "ISWARM2",
                         "numberplateOrigin": "AT",
-                        "numberPlateRegion":"I"
+                        "numberPlateArea":"I"
                     }
                 ]
             },
