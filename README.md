@@ -10,6 +10,7 @@ The expert event schema is defined in swarm-event-schema.json, while solution sp
 
 ### Counting Line / Crossing Line
 
+
 Sample message
 ```json
 { 
@@ -83,7 +84,8 @@ Sample message
       "timestamp":"2019-12-29T10:31:14.373202Z",
       "trackId": 42,
       "numberPlate": "IXXX42",
-      "numberPlateOrigin": "AT"
+      "numberPlateOrigin": "AT",
+      "numberPlateArea":"I"
    },
    "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
@@ -269,11 +271,13 @@ Sample message
                 [
                     {
                         "numberplate": "ISWARM1",
-                        "numberplateOrigin": "AT"
+                        "numberplateOrigin": "AT",
+                        "numberPlateArea":"I"
                     },
                     {
                         "numberplate": "ISWARM2",
-                        "numberplateOrigin": "AT"
+                        "numberplateOrigin": "AT",
+                        "numberPlateArea":"I"
                     }
                 ]
             },
