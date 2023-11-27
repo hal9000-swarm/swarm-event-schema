@@ -85,7 +85,7 @@ Sample message
       "trackId": 42,
       "numberPlate": "IXXX42",
       "numberPlateOrigin": "AT",
-      "numberPlateArea":"W"
+      "numberPlateArea":"I"
    },
    "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
