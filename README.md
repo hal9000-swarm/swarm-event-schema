@@ -125,7 +125,9 @@ Sample message
           "saltId": "0854a686-401a-42f2-b715-655180888c85",
           "validFrom": "2019-12-29T09:31:14.373202Z",
           "validUntil":"2019-12-29T16:31:14.373202Z"
-      }
+      },
+     "numberPlateOrigin": "AT",
+     "numberPlateArea":"I"
    },
    "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
