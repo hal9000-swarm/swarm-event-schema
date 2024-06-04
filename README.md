@@ -145,6 +145,53 @@ Sample message
 }
 ```
 
+### Counting Line / Including Journey Time Observation for a Parking Scenario
+
+Sample message
+```json
+{ 
+   "crossingLineEvent":{ 
+      "class":"person",
+      "direction":"in",
+      "speedestimate": "83.26",
+      "lineId":"test_id",
+      "lineName":"office",
+      "directionName": "optional custom direction name",
+      "timestamp":"2019-12-29T10:31:14.373202Z",
+      "trackId": 23,   
+      "journeyTimePrimaryTag": {
+          "hash": "0f3f0125e621b6f29313eb8e6adddec192afa1dee9626fb8062725caf83f6867",
+          "saltId": "0c7355bd-bb7b-41c2-ae4c-a4f5ab89d1fa",
+          "validFrom": "2019-12-29T01:31:14.373202Z",
+          "validUntil":"2019-12-29T12:31:14.373202Z",
+          "parkingJourney":true
+      },
+      "journeyTimeSecondaryTag": {
+         "hash": "d8cee0c8f219e0e46480c374aa0a8cabe149f2f21e2c1e60ceea137s186e8c34",
+          "saltId": "0854a686-401a-42f2-b715-655180888c85",   
+          "validFrom": "2019-12-29T09:31:14.373202Z",
+          "validUntil":"2019-12-29T16:31:14.373202Z",
+          "parkingJourney":true
+      },
+     "numberPlateOrigin": "AT",
+     "numberPlateArea":"I"
+   },
+   "node":{ 
+      "id":"99031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"test"
+   },
+   "stream":{ 
+      "id":"79031920-6239-471e-a3d7-f241b7753fd0",
+      "name":"streamname",
+      "geoLocation": {
+        "coordinates": [47.2692, 11.4041]
+      }
+   },
+   "version":"4.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/"
+}
+```
+
 ### Heatmap
 
 Sample message

@@ -101,6 +101,10 @@
                 {
                     "type": "string",
                     "format": "date-time"
+                },
+                 "parkingJourney": 
+                {
+                    "type": "boolean"
                 }
             },
             "required":
