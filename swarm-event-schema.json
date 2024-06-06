@@ -192,7 +192,7 @@
                 {
                     "type": "number"
                 },
-                trackUuid":
+                "trackUuid":
                 {
                     "type": "string"
                 },
@@ -274,7 +274,7 @@
                 {
                     "type": "number"
                 },
-                trackUuid":
+                "trackUuid":
                 {
                     "type": "string"
                 },
@@ -504,7 +504,7 @@
                 {
                     "type": "number"
                 },
-                trackUuid":
+                "trackUuid":
                 {
                     "type": "string"
                 },
@@ -628,7 +628,7 @@
                 {
                     "type": "number"
                 },
-                trackUuid":
+                "trackUuid":
                 {
                     "type": "string"
                 },
