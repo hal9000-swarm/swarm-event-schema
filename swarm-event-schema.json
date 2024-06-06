@@ -192,6 +192,10 @@
                 {
                     "type": "number"
                 },
+                trackUuid":
+                {
+                    "type": "string"
+                },
                 "path":
                 {
                     "type": "array",
@@ -269,6 +273,10 @@
                 "trackId":
                 {
                     "type": "number"
+                },
+                trackUuid":
+                {
+                    "type": "string"
                 },
                 "object":
                 {
@@ -496,6 +504,10 @@
                 {
                     "type": "number"
                 },
+                trackUuid":
+                {
+                    "type": "string"
+                },
                 "speedestimate":
                 {
                     "type": "string"
@@ -615,6 +627,10 @@
                 "trackId":
                 {
                     "type": "number"
+                },
+                trackUuid":
+                {
+                    "type": "string"
                 },
                 "movementPath":
                 {
