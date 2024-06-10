@@ -194,7 +194,8 @@
                 },
                 "trackUuid":
                 {
-                    "type": "string"
+                    "type": "string",
+                    "$ref": "#/definitions/id"
                 },
                 "path":
                 {
@@ -276,7 +277,8 @@
                 },
                 "trackUuid":
                 {
-                    "type": "string"
+                    "type": "string",
+                    "$ref": "#/definitions/id"
                 },
                 "object":
                 {
@@ -506,7 +508,8 @@
                 },
                 "trackUuid":
                 {
-                    "type": "string"
+                    "type": "string",
+                    "$ref": "#/definitions/id"
                 },
                 "speedestimate":
                 {
@@ -630,7 +633,8 @@
                 },
                 "trackUuid":
                 {
-                    "type": "string"
+                    "type": "string",
+                    "$ref": "#/definitions/id"
                 },
                 "movementPath":
                 {
