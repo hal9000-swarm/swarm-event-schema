@@ -22,7 +22,9 @@ Sample message
       "lineId":"test_id",
       "lineName":"office",
       "timestamp":"2019-12-29T10:31:14.373202Z",
-      "trackId": 23
+      "trackId": 23,
+      "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90"
+
    },
    "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
@@ -83,6 +85,7 @@ Sample message
       "lineName":"garage",
       "timestamp":"2019-12-29T10:31:14.373202Z",
       "trackId": 42,
+      "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90",
       "numberPlate": "IXXX42",
       "numberPlateOrigin": "AT",
       "numberPlateArea":"I"
@@ -114,6 +117,7 @@ Sample message
       "directionName": "optional custom direction name",
       "timestamp":"2019-12-29T10:31:14.373202Z",
       "trackId": 23,   
+      "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90",
       "journeyTimePrimaryTag": {
           "hash": "0f3f0125e621b6f29313eb8e6adddec192afa1dee9626fb8062725caf83f6867",
           "saltId": "0c7355bd-bb7b-41c2-ae4c-a4f5ab89d1fa",
@@ -200,6 +204,7 @@ Sample message
    "heatmapEvent":{ 
       "class":"car",
       "trackId": 23,
+      "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90",
       "path":[ 
          { 
             "h":554.192138671875,
@@ -383,6 +388,7 @@ Sample message
          "timestamp":"2019-12-29T10:31:20.373202Z"
       },
       "trackId": 23,
+      "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90",
       "movementPath":[
          {
             "timestamp":"2019-12-29T10:31:14.373202Z",
@@ -461,7 +467,8 @@ Sample message
          "virtualDoorName": "door1",
          "timestamp": "2020-01-02T14:59:27.85136Z",
          "direction": "in",
-         "trackId": 23
+         "trackId": 23,
+         "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90"
     }
 }
 ```
@@ -509,7 +516,8 @@ Sample message
                 "speedestimate": "120",
                 "subClass": "van",
                 "timestamp": "2022-04-28T12:22:06.761660Z",
-                "trackId": 3
+                "trackId": 3,
+                "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90"
             }
         }
     ],
