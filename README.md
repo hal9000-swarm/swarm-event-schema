@@ -1,4 +1,4 @@
-# Swarm Event Schema
+# Event Schema
 
 This specifies the JSON schema (https://json-schema.org/) for generated events. Messages can be validated against the schema e.g. on https://www.jsonschemavalidator.net/.
 
