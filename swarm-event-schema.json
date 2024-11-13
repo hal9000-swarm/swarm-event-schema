@@ -546,6 +546,18 @@
                 {
                     "type": "string",
                     "format": "date-time"
+                },
+                "path": 
+                {
+                    "$ref": "#/definitions/originDestinationEvent/properties/movementPath"
+                },
+                "numberPlateRect":
+                {   
+                    "$ref": "#/definitions/rectangle"
+                },
+                "vehicleRect":
+                {
+                    "$ref": "#/definitions/rectangle"
                 }
             },
             "required":
@@ -555,6 +567,35 @@
                 "lineName",
                 "direction",
                 "timestamp"
+            ]
+        },
+        "rectangle":
+        {
+            "type": "object",
+            "properties": 
+            {
+                "x":
+                {
+                    "type": "number"
+                },
+                "y":
+                {
+                    "type": "number"
+                },
+                "h":
+                {
+                    "type": "number"
+                },
+                "w":
+                {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "x",
+                "y",
+                "h",
+                "w"
             ]
         },
         "zone":

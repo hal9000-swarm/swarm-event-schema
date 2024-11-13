@@ -88,7 +88,19 @@ Sample message
       "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90",
       "numberPlate": "IXXX42",
       "numberPlateOrigin": "AT",
-      "numberPlateArea":"I"
+      "numberPlateArea":"I",
+      "numberPlateRect": {
+         "h": 44,
+         "w": 109,
+         "x": 1138,
+         "y": 926
+      },
+      "vehicleRect": {
+         "h": 603,
+         "w": 421,
+         "x": 961,
+         "y": 401
+    }
    },
    "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
