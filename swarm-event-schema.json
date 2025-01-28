@@ -4,12 +4,20 @@
     "title": "Swarm Event Schema",
     "definitions":
     {
-        "id":
+        "uuid":
         {
             "type": "string",
             "examples":
             [
                 "56317209-9B83-43A6-A63E-58C9191A7869"
+            ]
+        },
+        "tenantId":
+        {
+            "type": "string",
+            "examples":
+            [
+                "12347209-9B83-43A6-A63E-58C9191A7869"
             ]
         },
         "node":
@@ -750,6 +758,7 @@
     },
     "required":
     [
+        "uuid",
         "version",
         "eventSchema",
         "node",
