@@ -34,8 +34,10 @@ Sample message
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
-   "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/"
+   "version":"5.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+   "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6"
 }
 ```
 
@@ -66,8 +68,10 @@ Sample (counting event) with metadata
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
-   "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/"
+   "version":"5.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+   "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6"
 }
 ```
 
@@ -98,8 +102,10 @@ Sample message
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
-   "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/"
+   "version":"5.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+   "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6"
 }
 ```
 
@@ -144,8 +150,10 @@ Sample message
         "coordinates": [47.2692, 11.4041]
       }
    },
-   "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/"
+   "version":"5.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+   "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6"
 }
 ```
 
@@ -218,8 +226,10 @@ Sample message
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
-   "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/"
+   "version":"5.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+   "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6"
 }
 ```
 
@@ -249,8 +259,10 @@ Sample message
     "triggerType": "time",
     "capacity": 20
   },
-   "version":"4.0",
-   "eventSchema": "https://swarm-analytics.com/schema/event/"
+   "version":"5.0",
+   "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+   "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6"
 }
 ```
 
@@ -260,6 +272,8 @@ Sample message
 ```json
 {
     "eventSchema": "https://swarm-analytics.com/schema/event/",
+    "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+    "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6",
     "node":
     {
         "id": "nodeId",
@@ -304,7 +318,7 @@ Sample message
         "id": "streamId",
         "name": "streamname"
     },
-    "version": "4.0"
+    "version": "5.0"
 }
 ```
 
@@ -313,8 +327,10 @@ Sample message
 Sample message
 ```json
 {
-   "version":"4.0",
+   "version":"5.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+   "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6",
     "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
@@ -402,8 +418,10 @@ Sample message
 Sample message
 ```json
 {
-   "version": "4.0",
+   "version": "5.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/",
+   "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+   "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6",
    "node": {
       "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
       "name": "test"
@@ -433,6 +451,8 @@ Sample message
 ```json
 {
     "eventSchema": "https://swarm-analytics.com/schema/event/",
+    "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
+    "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6",
     "ruleEvents":
     [
         {
@@ -481,13 +501,13 @@ Sample message
     },
     "ruleId": "2b854935-cf8b-45af-b0e2-eaec456195bc",
     "ruleName": "cars near people",
-   "timestamp": "2022-04-28T12:22:06.761660Z",
+    "timestamp": "2022-04-28T12:22:06.761660Z",
     "stream":
     {
         "id": "96dfc3e0-0e82-4790-8104-cff33455dc2b",
         "name": "stream1"
     },
-    "version": "4.0"
+    "version": "5.0"
 }
 ```
 
