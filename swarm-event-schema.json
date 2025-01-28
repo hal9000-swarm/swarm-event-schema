@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://swarm-analytics.com/schema/event/4.0",
+    "$id": "https://swarm-analytics.com/schema/event/5.0",
     "title": "Swarm Event Schema",
     "definitions":
     {
@@ -697,7 +697,7 @@
         "version":
         {
             "type": "string",
-            "const": "4.0"
+            "const": "5.0"
         },
         "eventSchema":
         {
