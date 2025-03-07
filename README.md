@@ -211,7 +211,7 @@ Sample message
         "coordinates": [47.2692, 11.4041]
       }
    },
-   "version":"4.0",
+   "version":"5.0",
    "eventSchema": "https://swarm-analytics.com/schema/event/"
 }
 ```
