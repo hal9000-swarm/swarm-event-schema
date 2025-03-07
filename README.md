@@ -56,13 +56,13 @@ Sample (counting event) with metadata
       "timestamp":"2019-12-29T10:31:14.373202Z",
       "trackId": 23
    },
-   "metadata": {
-     "direction": "north",
-     "location":  "highway entrance"
-   },
    "node":{ 
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
-      "name":"test"
+      "name":"test",
+      "metadata": {
+         "direction": "north",
+         "location":  "highway entrance"
+      }
    },
    "stream":{ 
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",

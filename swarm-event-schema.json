@@ -32,7 +32,10 @@
                 "name":
                 {
                     "type": "string"
-                }
+                },   
+                "metadata": {
+                    "$ref": "#/definitions/metadata"
+                },
             },
             "required":
             [
@@ -750,7 +753,7 @@
         },
         "node":
         {
-            "$ref": "#/definitions/node"
+            "$ref": "#/definitions/node",
         },
         "uuid":
         {
@@ -773,9 +776,6 @@
         "stream":
         {
             "$ref": "#/definitions/stream"
-        },
-        "metadata": {
-            "$ref": "#/definitions/metadata"
         },
         "ruleId":
         {
