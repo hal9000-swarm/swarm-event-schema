@@ -4,7 +4,7 @@
     "title": "Swarm Event Schema",
     "definitions":
     {
-        "uuid":
+        "id":
         {
             "type": "string",
             "examples":
