@@ -13,8 +13,8 @@ The expert event schema is defined in swarm-event-schema.json, while solution sp
 
 Sample message
 ```json
-{ 
-   "crossingLineEvent":{ 
+{
+   "crossingLineEvent":{
       "class":"person",
       "direction":"in",
       "directionName": "optional custom direction name",
@@ -26,11 +26,11 @@ Sample message
       "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90"
 
    },
-   "node":{ 
+   "node":{
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
    },
-   "stream":{ 
+   "stream":{
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
@@ -45,8 +45,8 @@ Sample message
 
 Sample (counting event) with metadata
 ```json
-{ 
-   "crossingLineEvent":{ 
+{
+   "crossingLineEvent":{
       "class":"person",
       "direction":"in",
       "directionName": "optional custom direction name",
@@ -56,7 +56,7 @@ Sample (counting event) with metadata
       "timestamp":"2019-12-29T10:31:14.373202Z",
       "trackId": 23
    },
-   "node":{ 
+   "node":{
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test",
       "metadata": {
@@ -64,7 +64,7 @@ Sample (counting event) with metadata
          "location":  "highway entrance"
       }
    },
-   "stream":{ 
+   "stream":{
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
@@ -79,8 +79,8 @@ Sample (counting event) with metadata
 
 Sample message
 ```json
-{ 
-   "crossingLineEvent":{ 
+{
+   "crossingLineEvent":{
       "class":"car",
       "subClass":"van",
       "direction":"in",
@@ -106,11 +106,11 @@ Sample message
          "y": 401
     }
    },
-   "node":{ 
+   "node":{
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
    },
-   "stream":{ 
+   "stream":{
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
@@ -125,16 +125,17 @@ Sample message
 
 Sample message
 ```json
-{ 
-   "crossingLineEvent":{ 
-      "class":"person",
+{
+   "crossingLineEvent":{
+      "class":"car",
+      "subClass":"van",
       "direction":"in",
       "speedestimate": "83.26",
       "lineId":"test_id",
-      "lineName":"office",
+      "lineName":"main_road",
       "directionName": "optional custom direction name",
       "timestamp":"2019-12-29T10:31:14.373202Z",
-      "trackId": 23,   
+      "trackId": 23,
       "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90",
       "journeyTimePrimaryTag": {
           "hash": "0f3f0125e621b6f29313eb8e6adddec192afa1dee9626fb8062725caf83f6867",
@@ -151,11 +152,11 @@ Sample message
      "numberPlateOrigin": "AT",
      "numberPlateArea":"I"
    },
-   "node":{ 
+   "node":{
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
    },
-   "stream":{ 
+   "stream":{
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname",
       "geoLocation": {
@@ -173,16 +174,17 @@ Sample message
 
 Sample message
 ```json
-{ 
-   "crossingLineEvent":{ 
-      "class":"person",
+{
+   "crossingLineEvent":{
+      "class":"car",
+      "subClass":"van",
       "direction":"in",
       "speedestimate": "83.26",
       "lineId":"test_id",
-      "lineName":"office",
+      "lineName":"park_deck",
       "directionName": "optional custom direction name",
       "timestamp":"2019-12-29T10:31:14.373202Z",
-      "trackId": 23,   
+      "trackId": 23,
       "journeyTimePrimaryTag": {
           "hash": "0f3f0125e621b6f29313eb8e6adddec192afa1dee9626fb8062725caf83f6867",
           "saltId": "0c7355bd-bb7b-41c2-ae4c-a4f5ab89d1fa",
@@ -192,7 +194,7 @@ Sample message
       },
       "journeyTimeSecondaryTag": {
          "hash": "d8cee0c8f219e0e46480c374aa0a8cabe149f2f21e2c1e60ceea137s186e8c34",
-          "saltId": "0854a686-401a-42f2-b715-655180888c85",   
+          "saltId": "0854a686-401a-42f2-b715-655180888c85",
           "validFrom": "2019-12-29T09:31:14.373202Z",
           "validUntil":"2019-12-29T16:31:14.373202Z",
           "parkingJourney":true
@@ -200,11 +202,11 @@ Sample message
      "numberPlateOrigin": "AT",
      "numberPlateArea":"I"
    },
-   "node":{ 
+   "node":{
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
    },
-   "stream":{ 
+   "stream":{
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname",
       "geoLocation": {
@@ -220,55 +222,55 @@ Sample message
 
 Sample message
 ```json
-{ 
-   "heatmapEvent":{ 
+{
+   "heatmapEvent":{
       "class":"car",
       "trackId": 23,
       "trackUuid": "5609fb4b-cf2b-426d-8f75-0a639a932b90",
-      "path":[ 
-         { 
+      "path":[
+         {
             "h":554.192138671875,
             "timestamp":"2019-12-29T10:31:14.373202Z",
             "w":766.527587890625,
             "x":0.0,
             "y":525.807861328125
          },
-         { 
+         {
             "h":757.237060546875,
             "timestamp":"2019-12-29T10:31:14.373202Z",
             "w":1013.7042236328125,
             "x":137.61514282226563,
             "y":161.38143920898438
          },
-         { 
+         {
             "h":757.2371215820313,
             "timestamp":"2019-12-29T10:31:14.373202Z",
             "w":789.4736938476563,
             "x":249.7304229736328,
             "y":108.07360076904297
          },
-         { 
+         {
             "h":757.2371215820313,
             "timestamp":"2019-12-29T10:31:14.373202Z",
             "w":1013.704345703125,
             "x":149.989990234375,
             "y":157.8472137451172
          },
-         { 
+         {
             "h":757.237060546875,
             "timestamp":"2019-12-29T10:31:14.373202Z",
             "w":789.4736938476563,
             "x":184.40171813964844,
             "y":161.38143920898438
          },
-         { 
+         {
             "h":757.2371215820313,
             "timestamp":"2019-12-29T10:31:14.373202Z",
             "w":1013.7042236328125,
             "x":131.88348388671875,
             "y":157.8472137451172
          },
-         { 
+         {
             "h":757.2371215820313,
             "timestamp":"2019-12-29T10:31:14.373202Z",
             "w":1013.7042236328125,
@@ -277,11 +279,11 @@ Sample message
          }
       ]
    },
-   "node":{ 
+   "node":{
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
    },
-   "stream":{ 
+   "stream":{
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
@@ -297,11 +299,11 @@ Sample message
 Sample message
 ```json
 {
-   "node":{ 
+   "node":{
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
    },
-   "stream":{ 
+   "stream":{
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
@@ -390,11 +392,11 @@ Sample message
    "eventSchema": "https://swarm-analytics.com/schema/event/",
    "uuid": "123456a7-dd2d-4016-b9ff-530ab24e5f98",
    "tenantId": "e1df4def-6770-41bd-b3a8-9876549251e6",
-    "node":{ 
+    "node":{
       "id":"99031920-6239-471e-a3d7-f241b7753fd0",
       "name":"test"
    },
-   "stream":{ 
+   "stream":{
       "id":"79031920-6239-471e-a3d7-f241b7753fd0",
       "name":"streamname"
    },
@@ -485,7 +487,7 @@ Sample message
       "id": "b8ade223-e847-4741-a405-7f62c0403aa2",
       "name": "test"
    },
-   "stream":{ 
+   "stream":{
       "id":"streamid",
       "name":"streamname"
    },
@@ -569,4 +571,3 @@ Sample message
     "version": "5.0"
 }
 ```
-
